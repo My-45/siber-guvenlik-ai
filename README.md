@@ -2,7 +2,7 @@
  Bu proje,  makine öğrenmesi kullanarak kredi kartı dolandırıcılığını 
 otomatik olarak tespit etmektedir.
 
-# HAZIRLAYAN: MERVE YILMAZ
+# Hazırlayan : Merve Yılmaz
 
 ## 📌 Proje Hakkında
 
