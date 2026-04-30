@@ -2,6 +2,8 @@
  Bu proje,  makine öğrenmesi kullanarak kredi kartı dolandırıcılığını 
 otomatik olarak tespit etmektedir.
 
+# HAZIRLAYAN: MERVE YILMAZ
+
 ## 📌 Proje Hakkında
 
 Gerçek bir Avrupa bankasına ait 284.807 kredi kartı işlemi 
@@ -15,6 +17,33 @@ Gerçek bir Avrupa bankasına ait 284.807 kredi kartı işlemi
 | Algoritma | Recall | Precision | F1 |
 |-----------|--------|-----------|-----|
 | IsolationForest (c=0.002) | %28 | %24 | %26 |
+
+### Neden Recall Düşük?
+
+Bu projede **unsupervised (etiketsiz) öğrenme** tercih edilmiştir.
+Model, hangi işlemin dolandırıcılık olduğunu önceden bilmeden
+sadece "bu işlem diğerlerinden farklı mı?" sorusunu yanıtlar.
+
+Recall'ın düşük olmasının üç temel nedeni vardır:
+
+1. **Veri dengesizliği:** 284.807 işlemin yalnızca 492'si (%0.17)
+dolandırıcılık. Model büyük çoğunluğu normal gördüğü için
+anormal örüntüleri kaçırabiliyor.
+
+2. **Etiket görmeden öğrenme:** Model "bu dolandırıcılık"
+diye öğretilmediği için bazı dolandırıcılık işlemlerini
+normal işlemlerle karıştırıyor. Supervised bir model
+(%90+ recall) çok daha başarılı olurdu.
+
+3. **Adversarial problem:** Gerçek dolandırıcılar normal
+görünmeye çalışır — bu yüzden bazı işlemler modeli atlatıyor.
+
+### Neden Yine de Unsupervised Seçtik?
+
+Çünkü gerçek hayatta her saldırı tipi önceden bilinmiyor.
+Yeni bir dolandırıcılık yöntemi çıktığında supervised model
+onu tanıyamaz — unsupervised model ise yine de
+"bu farklı görünüyor" diyebilir ve bu şekilde dolandırıcılık yöntemini tespit edebilir.
 
 
 ## 🛠️ Kullanılan Teknolojiler
