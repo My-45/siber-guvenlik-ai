@@ -1,6 +1,5 @@
 # 🔍 AI Destekli Anomali Tespit Sistemi
- Bu proje,  makine öğrenmesi kullanarak kredi kartı dolandırıcılığını 
-otomatik olarak tespit etmektedir.
+ Bu proje, kredi kartı işlemlerinde şüpheli aktiviteleri tespit etmek amacıyla geliştirilmiş yapay zeka destekli bir siber güvenlik analiz platformudur.
 
 # Hazırlayan : Merve Yılmaz
 
@@ -67,15 +66,21 @@ venv\Scripts\activate
 5. `.env` dosyası oluştur:GROQ_API_KEY=senin_api_keyin
 6.  Modeli eğit: py model.py
 7.  Uygulamayı başlat: streamlit run app.py
-   ## 🔍 Nasıl Çalışır?
+^  ##  🔍 Nasıl Çalışır?
 
 1. `creditcard.csv` dosyasını arayüzden yükle
 2. Model otomatik analiz eder
 3. Şüpheli işlemleri listeler
-4. "Analiz Et" butonuyla LLM açıklaması al
+4. Risk oranını hesaplar 
+5. Seçilen şüpheli işlem AI tarafından açıklanır
 
 ## ⚠️ Önemli Not
 
-Veri seti gizlilik nedeniyle repoya dahil edilmemiştir.
-Kaggle'dan indirmeniz gerekmektedir.
+- Veri seti boyutu büyük olduğu için repoya eklenmemiştir
+- Kullanıcıların Kaggle üzerinden indirmesi gereklidir
+- .env dosyası güvenlik nedeniyle paylaşılmamıştır
+## 📊 Ekran Görüntüsü
+<img width="1600" height="767" alt="WhatsApp Image 2026-05-06 at 01 07 37" src="https://github.com/user-attachments/assets/48b7156b-78ab-4558-a597-0781f889f459" />
+<img width="1600" height="756" alt="WhatsApp Image 2026-05-06 at 01 08 52" src="https://github.com/user-attachments/assets/d91e20d1-d2b9-4027-8c8b-758238f9cf38" />
+<img width="1600" height="754" alt="WhatsApp Image 2026-05-06 at 01 10 34" src="https://github.com/user-attachments/assets/1a44e401-512f-499d-8f97-6000e07ec4a5" />
 
