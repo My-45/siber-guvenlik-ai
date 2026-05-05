@@ -66,7 +66,7 @@ venv\Scripts\activate
 5. `.env` dosyası oluştur:GROQ_API_KEY=senin_api_keyin
 6.  Modeli eğit: py model.py
 7.  Uygulamayı başlat: streamlit run app.py
-^  ##  🔍 Nasıl Çalışır?
+ ##  🔍 Nasıl Çalışır?
 
 1. `creditcard.csv` dosyasını arayüzden yükle
 2. Model otomatik analiz eder
